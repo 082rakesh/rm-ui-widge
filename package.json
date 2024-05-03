@@ -1,0 +1,68 @@
+{
+	"name": "rm-ui-widget",
+	"version": "1.0.5",
+	"description": "this is ui widget",
+	"main": "lib/commonjs/index.js",
+	"module": "lib/module/index.js",
+	"types": "lib/typescript/src/index.d.ts",
+	"react-native": "src/index.tsx",
+	"source": "src/index.tsx",
+	"scripts": {
+		"test": "jest",
+		"typescript": "tsc --noEmit",
+		"lint": "eslint \"**/*.{js,ts,tsx}\"",
+		"prepare": "bob build",
+		"release": "release-it",
+		"example": "yarn --cwd example",
+		"bootstrap": "yarn example && yarn install"
+	},
+	"keywords": [
+		"react-native"
+	],
+	"author": "",
+	"license": "MIT",
+	"devDependencies": {
+		"@types/react": "^18.2.44",
+		"react": "18.2.0",
+		"react-native": "0.73.6",
+		"react-native-builder-bob": "^0.20.4",
+		"release-it": "^15.0.0",
+		"typescript": "^5.2.2"
+	},
+	"peerDependencies": {
+		"react": "*",
+		"react-native": "*"
+	},
+	"files": [
+		"src",
+		"lib",
+		"!**/__tests__",
+		"!**/__fixtures__",
+		"!**/__mocks__",
+		"android",
+		"ios",
+		"cpp",
+		"*.podspec",
+		"!lib/typescript/example",
+		"!ios/build",
+		"!android/build",
+		"!android/gradle",
+		"!android/gradlew",
+		"!android/gradlew.bat",
+		"!android/local.properties",
+		"!**/.*"
+	],
+	"react-native-builder-bob": {
+		"source": "src",
+		"output": "lib",
+		"targets": [
+			"commonjs",
+			"module",
+			"typescript"
+		]
+	},
+	"eslintIgnore": [
+		"node_modules/",
+		"lib/"
+	]
+}
